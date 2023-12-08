@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheet/landingPage.css" class="css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <img src="https://www.anchors.in/static/media/logo-beta.866fb84bc30700f38224.png" alt="">
+        </div>
+        <div class="landing-main">
+
+           <div class="content-main"> <h1>Discover your earning </h1>
+            <h1>potential</h1>
+            <p>Turn your youtube expertise into a lucrative income </p>
+            <p > through resource sharing</p>
+        </div>
+           <div class="input-main">
+            <form action="/search" id="checkForm" method="post">
+              <input type="text"  placeholder=' &#xF2D5; enter youtube video link'  name="videoUrl">
+            <button type="submit">check</button>
+            </form>
+           </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const tl = gsap.timeline()
+        
+        
+        tl.from('.navbar img',{
+            y:-100,
+            delay:0.3,
+            duration:0.6
+        })
+        tl.from('.content-main h1 , .content-main p , .input-main ',{
+          scale:0,
+          opacity:0,
+          duration:0.7,
+          stagger:0.5
+        })
+
+//         document.getElementById('checkForm').addEventListener('submit', function(event) {
+//          event.preventDefault();
+  
+//       const data = {
+        
+//           videoUrl: document.querySelector('[name="videoUrl"]').value,
+          
+        
+//       };
+//       console.log(data);
+//       fetch(this.getAttribute('action'), {
+//         method:"GET",
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(data),
+//     })
+//     // .then(response => response.json())
+//     .then(data => {
+//         console.log('Success:', data);
+//     })
+//     .catch(error => {
+//         console.error('Error:', error);
+//     });
+// });
+
+    </script>
+</body>
+</html>
