@@ -9,7 +9,7 @@ const ytdl = require('ytdl-core');
 const { google } = require('googleapis');
 require('dotenv').config()
 
-const APIKEY = "AIzaSyCOxGhWdaeYeegJAkrUM6pUqve9JEpZyac";
+const APIKEY = process.env.APIKEY
 // const baseurl = "https://www.googleapis.com/youtube/v3";
 const baseurl = "https://www.googleapis.com/youtube/v3"
 var subscribersGlobal ;
