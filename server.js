@@ -51,7 +51,7 @@ app.post('/search',async(req,res)=>{
       
           // Display the video information
          
-          console.log('Video Title:', videoInfo);
+          // console.log('Video Title:', videoInfo);
           const videoID = ytdl.getURLVideoID(videoUrl);
 
           const {videoDetails,arr} = await  getVideoStats(videoID)
@@ -173,7 +173,7 @@ async function getAllVideosDetailsFromChannel(apiKey, channelId) {
       const playlistItemsResponse = await youtube.playlistItems.list({
         part: 'snippet,contentDetails',
         playlistId: uploadsPlaylistId,
-        maxResults: 20, // You can adjust the number of results as needed
+        maxResults: 50, // You can adjust the number of results as needed
       });
   
       // Display details of all videos in the uploads playlist
@@ -225,7 +225,7 @@ async function getAllVideosDetailsFromChannel(apiKey, channelId) {
  
 
 
-app.get('/email', sendmail)
+app.post('/email', sendmail)
 
 app.get('/earningPage',(req,res)=>{ 
     res.render('earningPage') 

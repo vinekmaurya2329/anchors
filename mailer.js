@@ -2,7 +2,9 @@ const nodemailer  = require('nodemailer');
  
   // const emailDetails = localStorage.getItem('ReqDetails')
 const sendmail =async (req,res ,next)=>{
+  const {name ,number,time,comment} = req.body;
    console.log(req.body ,' reqbody');
+   console.log(name , number);
   let testAccount = await nodemailer.createTestAccount();
 //  connect ethereal server 
     const transporter = await  nodemailer.createTransport({
@@ -23,11 +25,11 @@ const sendmail =async (req,res ,next)=>{
     
     //  send mail 
     const info = await transporter.sendMail({
-        from: `vinek`, // sender address
+        from: `vinekmaurya2329@gmail.com`, // sender address
         to: "aashmaurya7522@gmail.com", // list of receivers
         subject: "Request a Call back ", // Subject line
-        text: " this  is a  reminder message"// plain text body
-        // html:`<h4>name : ${emailDetails.name}</h4> <h5>contact : ${emailDetails.number}</h5>`, 
+        text: `  `,// plain text body
+        html:` <h2>this  is a  reminder message to contact ${name}</h2><h3>name : ${name}</h3> <h5>contact : ${number}</h5> <p>time : ${time}</p> <p> comment : ${comment}</p>`, 
       });
        
       

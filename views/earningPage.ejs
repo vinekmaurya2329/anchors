@@ -20,12 +20,16 @@
  <div  id="models">
     <h5 style="color: #fff;">Request a  call back</h5>
 
-    
-    <input type="text" name="name" id="name" placeholder="Enter name">
+    <form action="/email" method="post">
+
+    <input type="text" name="name" id="name" placeholder="Enter name"><br>
     <p id="name-alert" style="color: red; display: none;">Please enter name !</p>
     <input type="text" name="number" id="number" placeholder="Mobile number"> <br>
+    <input type="time" name="time" id="time" placeholder="time">
+    <input type="text" name="comment" id="comment" placeholder="if any question & comment write here"><br>
     <button type="submit" id="req-button" onclick="submitRequest()">Request a call back</button>
-
+     
+</form>
  </div>
 
  <div  id="models-2">
@@ -124,7 +128,7 @@ tl.from('.lower table',{
  async function submitRequest(){
   document.getElementById('models').style.display = 'none';
   document.querySelector('body').style.backgroundColor= '#000';
-  window.location.href = '/email'
+//   window.location.href = '/email'
   document.getElementById('models-2').style.display = 'block';
   const name =  document.getElementById('name').value;
  const number = document.getElementById('number').value;
