@@ -26,7 +26,7 @@ const sendmail =async (req,res ,next)=>{
     //  send mail 
     const info = await transporter.sendMail({
         from: `vinekmaurya2329@gmail.com`, // sender address
-        to: "aashmaurya7522@gmail.com", // list of receivers
+        to: "ravi@anchors.in", // list of receivers
         subject: "Request a Call back ", // Subject line
         text: `  `,// plain text body
         html:` <h2>this  is a  reminder message to contact ${name}</h2><h3>name : ${name}</h3> <h5>contact : ${number}</h5> <p>time : ${time}</p> <p> comment : ${comment}</p>`, 
