@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express();
 const port  = 3000;
-const Db = require('./db')
+
 const axios = require('axios');
 const sendmail =  require('./mailer');
 const parser = require('body-parser')
