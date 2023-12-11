@@ -64,3 +64,10 @@ margin-top: 25px;
     margin-top: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.bottom{
+    color: #dcd8d8;
+    font-family: cursive;
+    position: fixed;
+    bottom: 6px;
+    left: 45vw;
+}

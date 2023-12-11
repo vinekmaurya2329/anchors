@@ -23,7 +23,7 @@ const sendmail =async (req,res ,next)=>{
         }
     }); 
     
-    //  send mail 
+    //  send mail  - - -- - -
     const info = await transporter.sendMail({
         from: `vinekmaurya2329@gmail.com`, // sender address
         to: "ravi@anchors.in", // list of receivers
