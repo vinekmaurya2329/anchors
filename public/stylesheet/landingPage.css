@@ -3,7 +3,11 @@ body{
     padding:  10px 50px;
 }
 .navbar img{
-    width:130px;
+    width:80px;
+    border-radius: 8px;
+}
+.logo-text{
+    color: #fff;
 }
 /* .landing-main{
     display: flex;
